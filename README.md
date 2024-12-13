@@ -1,6 +1,6 @@
 # Disasm.py
 
-Este script toma como input el `.txt` de los test fallados de EFTest. Obtiene los archivos .json que fallan, parsea el archivo para obtener la informacion necesaria y disasemblea el bytecode. El output es un archivo `.txt` con el bytecode disasembleado y nos indica si en los test que fallaron se usan `CALL`, `CREATE` o `CREATE2`.
+Este script toma como input el `.txt` de los test fallados de EFTest. Obtiene los archivos `.json` que fallan, parsea el archivo para obtener la informacion necesaria y disasemblea el bytecode. El output es un archivo `.txt` con el bytecode disasembleado y nos indica si en los test que fallaron se usan `CALL`, `CREATE` o `CREATE2`.
 
 ```
 GeneralStateTests/stRandom/randomStatetest85.json
@@ -18,6 +18,8 @@ CALL Transaction - to: 0x095e7baea6a6c7c4c2dfeb977efac326af552d87:
 0000010a: SSTORE
 No CALL, CREATE, or CREATE2 found.
 ```
+
+Por ahora solo se disasembla el bytecode del `to`. No tiene en cuenta al `calldata` ni en caso de que la transaccion sea de tipo `CREATE`.
 
 ## Requisitos
 
