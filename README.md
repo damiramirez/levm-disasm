@@ -32,7 +32,7 @@ Por ahora solo se disasembla el bytecode del `to`. No tiene en cuenta al `callda
 2. Ejecuta el script:
 
    ```sh
-   python disasm.py --path <EFTEST-LEVM-DIR> > <OUTPUT-FILE>.txt
+   python3 disasm.py --path <EFTEST-LEVM-DIR>
    ```
 
    Donde:
